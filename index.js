@@ -40,8 +40,6 @@ $(() => {
   }
 
   function renderDeck(deck) {
-    document.getElementById("card-table").innerHTML = "";
-
     // creates a new card div with two divs inside holding value and suit
     // on each loop then appends that card to our main div 'card-table'
     for (let i = 0; i < deck.length; i++) {
@@ -54,20 +52,18 @@ $(() => {
 
       // appends img tag with relevant suit img (might be a better way to do this)
       // images are crap placeholders
+      let img = document.createElement("img");
+
       if (deck[i].Suit === "clubs") {
-        let img = document.createElement("img");
         img.src = "./images/club.png";
         suit.appendChild(img);
       } else if (deck[i].Suit === "diamonds") {
-        let img = document.createElement("img");
         img.src = "./images/diamond.png";
         suit.appendChild(img);
       } else if (deck[i].Suit === "hearts") {
-        let img = document.createElement("img");
         img.src = "./images/heart.png";
         suit.appendChild(img);
       } else {
-        let img = document.createElement("img");
         img.src = "./images/spades.png";
         suit.appendChild(img);
       }
