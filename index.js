@@ -18,7 +18,6 @@ $(() => {
 
   function getDeck() {
     let deck = [];
-
     for (let i = 0; i < suits.length; i++) {
       for (let x = 0; x < values.length; x++) {
         let card = { Value: values[x], Suit: suits[i] };
@@ -52,6 +51,26 @@ $(() => {
       card.className = "card";
       value.className = "value";
       suit.className = "suit " + deck[i].Suit;
+
+      // appends img tag with relevant suit img (might be a better way to do this)
+      // images are crap placeholders
+      if (deck[i].Suit === "clubs") {
+        let img = document.createElement("img");
+        img.src = "./images/club.png";
+        suit.appendChild(img);
+      } else if (deck[i].Suit === "diamonds") {
+        let img = document.createElement("img");
+        img.src = "./images/diamond.png";
+        suit.appendChild(img);
+      } else if (deck[i].Suit === "hearts") {
+        let img = document.createElement("img");
+        img.src = "./images/heart.png";
+        suit.appendChild(img);
+      } else {
+        let img = document.createElement("img");
+        img.src = "./images/spades.png";
+        suit.appendChild(img);
+      }
 
       value.innerHTML = deck[i].Value;
       card.appendChild(value);

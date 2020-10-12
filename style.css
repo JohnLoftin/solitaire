@@ -9,6 +9,7 @@
   margin: 15px;
 }
 
-.spades {
-  content: "&spades";
+.card img {
+  width: 90%;
+  margin: 0;
 }
