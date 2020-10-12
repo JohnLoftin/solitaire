@@ -1,0 +1,15 @@
+#card-table {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  margin: 15px;
+}
+
+.card img {
+  width: 90%;
+  margin: 0;
+}
