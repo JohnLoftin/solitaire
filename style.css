@@ -1,0 +1,14 @@
+#card-table {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  margin: 15px;
+}
+
+.spades {
+  content: "&spades";
+}
