@@ -56,17 +56,15 @@ $(() => {
 
       if (deck[i].Suit === "clubs") {
         img.src = "./images/club.png";
-        suit.appendChild(img);
       } else if (deck[i].Suit === "diamonds") {
         img.src = "./images/diamond.png";
-        suit.appendChild(img);
       } else if (deck[i].Suit === "hearts") {
         img.src = "./images/heart.png";
-        suit.appendChild(img);
       } else {
         img.src = "./images/spades.png";
-        suit.appendChild(img);
       }
+
+      suit.appendChild(img);
 
       value.innerHTML = deck[i].Value;
       card.appendChild(value);
